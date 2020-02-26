@@ -40,6 +40,13 @@ body {
     font-weight: bold;
 }
 
+.main-nav :hover {
+    background-color: var(--yellow);
+    border-style: solid;
+    border-radius: 1em;
+    padding: 0.2em;
+}
+
 @media (min-width:768px) {
     .header nav {
         flex-direction: row;
@@ -119,7 +126,11 @@ body {
 .content-menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+.content-menu a:hover {
+    border: var(--yellow);
+    border-style: solid;
 }
 
 .content-hero {
@@ -166,5 +177,10 @@ h2 {
 }
 
 .authors a {
-    padding-bottom: 1.5em;
+    padding-bottom: 0.5em;
+}
+
+.authors a:hover {
+    border: var(--yellow);
+    border-style: solid;
 }
