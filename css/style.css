@@ -2,8 +2,8 @@
     --green: #008000;
     --light-green: #57A639;
     --blue: #3B83BD;
-    --yellow: #ffff00;
-    --gold: #EFB810;
+    --yellow: #fafd0f;
+    --gold: #ffbf00;
     --dark-green: #46852e;
     --white: #FFFFFF;
 }
@@ -21,7 +21,7 @@ html {
 body {
     font-family: "Krub", sans-serif;
     /*Degrado de https://webgradients.com/*/
-    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
     min-height: 100%;
 }
 
@@ -33,7 +33,49 @@ ul {
 
 a {
     text-decoration: none;
-    color: var(--yellow);
+    color: var(--white);
+}
+
+.hero {
+    width: 100%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 500x;
+    background-image: url("../image/Laudato.jpg");
+    background-size: cover;
+    opacity: 0.5;
+    background-color: black;
+}
+
+.hero-content h1,
+h2,
+h3 {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    text-align: center;
+    color: var(--white);
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .main-nav {
@@ -62,41 +104,6 @@ a {
     overflow: hidden;
 }
 
-.hero {
-    /*imagen obtenida de https://revistavive.com/una-vida-al-estilo-laudato/*/
-    background-image: url(../image/Laudato.jpg);
-    height: 32em;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1em;
-    background-size: cover;
-}
-
-@media(min-width:768px) {
-    .hero {
-        background-image: url(../image/Laudato.jpg);
-        background-size: cover;
-    }
-}
-
-.hero::after {
-    background-color: rgba(0, 0, 0, 0.35);
-    position: absolute;
-    display: block;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
-
-.hero h1 {
-    color: var(--yellow);
-    font-size: 2.3em;
-    font-weight: bold;
-}
-
 .container {
     margin: 0 auto;
     max-width: 1200px;
@@ -106,13 +113,6 @@ a {
     -moz-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.65);
     box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.65);
     margin-bottom: 3em;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    flex: 1;
-    text-align: center;
 }
 
 .contenet-articles {
@@ -165,7 +165,7 @@ a {
     height: 100%;
     opacity: 0.4;
     content: "";
-    background-color: var(--blue);
+    background-color: black;
 }
 
 .image-clim p {
@@ -193,9 +193,9 @@ a {
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0.7;
+    opacity: 0.4;
     content: "";
-    background-color: var(--blue);
+    background-color: black;
     text-align: center;
 }
 
@@ -223,9 +223,9 @@ a {
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0.7;
+    opacity: 0.4;
     content: "";
-    background-color: var(--blue);
+    background-color: black;
 }
 
 .image-ani p {
@@ -245,4 +245,18 @@ h2 {
     .container {
         background-size: contain;
     }
+}
+
+.buttom {
+    font-size: 1.3em;
+    display: inline-block;
+    border: none;
+    border-radius: 0.5em;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 2;
+    background-color: var(--light-green);
+    width: 8.40em;
+    color: white;
 }
